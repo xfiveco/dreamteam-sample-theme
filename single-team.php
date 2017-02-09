@@ -1,6 +1,6 @@
 <?php
 /**
- * The Template for displaying single team page
+ * The Template for displaying single team member (person)
  *
  * @package dreamteam
  */
@@ -16,7 +16,7 @@ if ($user) {
 	$context['user_posts'] = Timber::get_posts(array('author' => $user['ID'], 'post_type' => 'post', 'numberposts' => 3 ));
 }
 
-// Get user's interview
+// Get person's interview
 $interview = $person->get_field('team_interview');
 if ($interview) {
 	$context['interview'] = new TimberPost($interview);
