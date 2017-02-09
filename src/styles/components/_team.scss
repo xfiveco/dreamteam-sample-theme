@@ -1,0 +1,62 @@
+/* ==========================================================================
+   #TEAM
+   ========================================================================== */
+
+.c-team {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c-team__heading {
+  margin: 1em 0;
+  text-align: center;
+}
+
+.c-team__item {
+  margin-bottom: 0;
+  max-width: 800px;
+  position: relative;
+  transition: opacity 0.1s ease-in-out;
+
+  @include bp-medium {
+    margin-bottom: 4em;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.c-team__item--reverse {
+  padding: 3em;
+
+  .c-team__title {
+    background: $color-bg;
+    bottom: 3em;
+    color: $color-text;
+    right: 3em;
+  }
+}
+
+.c-team__title {
+  background: $color-bg-reverse;
+  bottom: 0;
+  color: $color-text-reverse;
+  font-size: 1em;
+  padding: 0.5em 1em;
+  position: absolute;
+  margin: 0;
+  right: 0;
+  text-transform: uppercase;
+}
+
+.c-team__link {
+  display: block;
+  text-decoration: none;
+}
+
+.c-team__image {
+  max-width: 800px;
+  width: 100%;
+}

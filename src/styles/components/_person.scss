@@ -1,0 +1,96 @@
+/* ==========================================================================
+   #PERSON
+   ========================================================================== */
+
+.c-person__info {
+  padding: 4em 4em 1em 4em;
+}
+
+.c-person__info__name {
+  font-size: 3.6rem;
+}
+
+.c-person__info__position {
+  border-bottom: 1px solid $color-border;
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: normal;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+}
+
+.c-person__info__description {
+  width: 75%;
+}
+
+.c-person__quote {
+  padding: 4em;
+}
+
+.c-person__quote__title {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.c-person__quote__text {
+  quotes: '“' '”' '‘' '’';
+
+  p {
+    color: $color-text-light;
+    font-size: 1.5rem;
+
+    &:before {
+      content: open-quote;
+    }
+
+    &:after {
+      content: close-quote;
+    }
+  }
+}
+
+.c-person__links {
+  background: $color-bg-dark-reverse;
+  color: $color-text-reverse;
+  padding: 4em 4em 8em 4em;
+  position: relative;
+}
+
+.c-person__links__title {
+  margin-bottom: 0.25em;
+}
+
+.c-person__links__list {
+  margin-left: 0;
+}
+
+.c-person__links__item {
+  list-style: none;
+}
+
+.c-person__links__link {
+  color: $color-text-reverse;
+}
+
+.c-person__links__nav {
+  background: $color-bg-light-reverse;
+  bottom: 0;
+  color: $color-text-reverse;
+  font-size: 1.5rem;
+  left: 0;
+  padding: 1em;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  width: 50%;
+
+  &:hover {
+    color: $color-text;
+  }
+}
+
+.c-person__links__nav--next {
+  background: $color-bg-medium-reverse;
+  left: auto;
+  right: 0;
+}

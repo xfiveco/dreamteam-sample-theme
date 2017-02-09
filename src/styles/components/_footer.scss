@@ -1,0 +1,37 @@
+/* ==========================================================================
+   #FOOTER
+   ========================================================================== */
+
+.c-footer {
+  border: 1px solid $color-border;
+  color: $color-text-medium;
+  font-size: 0.8rem;
+  margin: 3em auto;
+  max-width: 800px;
+  padding: 2.5em 1em 1em 1em;
+  text-align: center;
+}
+
+.c-footer__note {
+  margin-bottom: 0.5em;
+}
+
+.c-footer__list {
+  list-style: none;
+}
+
+.c-footer__list__item {
+  display: inline-block;
+  margin: 0 0.25em;
+}
+
+.c-footer__xfive {
+  &:before {
+    background: $color-border;
+    content: '';
+    display: block;
+    height: 1px;
+    margin: 0 auto 1em auto;
+    width: 3em;
+  }
+}

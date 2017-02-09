@@ -1,0 +1,55 @@
+{% extends "layouts/base.twig" %}
+
+{% block content %}
+  <a href="/" class="c-top-link">Home</a>
+  <div class="o-layout o-layout--2 c-person">
+    <div class="o-layout__item">
+      <img src="{{person.thumbnail}}" alt="{{person.title}}">
+    </div>
+
+    <div class="o-layout__item c-person__info">
+      <h1 class="c-person__info__name">{{person.title}}</h1>
+      <h2 class="c-person__info__position">{{TimberTerm(person.team_position).title}}</h2>
+      <div class="c-person__info__description">
+        {{person.content}}
+      </div>
+    </div>
+
+    <div class="o-layout__item c-person__quote">
+      <h2 class="c-person__quote__title">A Grain of Wisdom</h2>
+      <blockquote class="c-person__quote__text">
+        <p>{{person.team_quote}}</p>
+      </blockquote>
+    </div>
+
+    <div class="o-layout__item c-person__links">
+      <h2 class="c-person__links__title">Articles</h2>
+      {% if user_posts %}
+        <ul class="c-person__links__list">
+        {% for user_post in user_posts %}
+          <li class="c-person__links__item"><a href="{{user_post.path}}" class="c-person__links__link">{{user_post.title}}</a></li>
+        {% endfor %}
+        </ul>
+      {% else %}
+        <p>Sorry, this person is too lazy to write anything.</p>
+      {% endif %}
+
+      <h2 class="c-person__links__title">Interview</h2>
+      {% if interview %}
+        <a href="{{interview.path}}" class="c-person__links__link">{{interview.title}}</a>
+      {% else %}
+        <p>Sorry, nobody wanted to interview this person.</p>
+      {% endif %}
+
+      {% if person.next.link is not empty %}
+        <a href="{{person.next.link}}" class="c-person__links__nav">Previous</a>
+      {% endif %}
+      {% if person.prev.link is not empty %}
+        <a href="{{person.prev.link}}" class="c-person__links__nav c-person__links__nav--next">Next</a>
+      {% endif %}
+    </div>
+
+  </div>
+  <!-- / c-person -->
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "layouts/base.twig" %}
+
+{% block content %}
+  <a href="/" class="c-top-link">Home</a>
+  <article id="post-{{post.ID}}">
+    <section class="c-post">
+      <h1 class="c-post__title">{{post.title}} <span class="js-greeting"></span></h1>
+      <p class="c-post__author">
+        <span>By</span> <a href="/team/{{person.slug}}/">{{ person.post_title }}</a> <span>&bull;</span> {{ post.post_date|date}}
+      </p>
+      <p class="c-post__excerpt">
+        {{post.post_excerpt}}
+      </p>
+      <div class="c-post__content">
+        {{post.content}}
+      </div>
+    </section>
+  </article>
+
+{% endblock %}

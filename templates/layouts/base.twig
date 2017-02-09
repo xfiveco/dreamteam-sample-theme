@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="{{site.charset}}" />
+  <title>
+    {% if wp_title %}
+      {{ wp_title }} - {{ site.name }}
+    {% else %}
+      {{ site.name }}
+    {% endif %}
+  </title>
+  <link rel="stylesheet" property="stylesheet" href="{{ revisionedPath('styles/main.css') }}" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.querySelector('html').classList.remove('no-js');</script>
+  <script src="https://use.typekit.net/uug4cll.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <script>document.querySelector('html').classList.remove('no-js');</script>
+  <link rel="pingback" href="{{site.pingback_url}}" />
+  {{function('wp_head')}}
+  {% block head %}
+  {% endblock %}
+</head>
+
+<body class="{{body_class}}">
+  <main class="o-wrapper">
+    {% block content %}
+      Sorry, no content
+    {% endblock %}
+  </main>
+
+  {% block footer %}
+    {% include 'components/footer.twig' %}
+  {% endblock %}
+</body>
+</html>

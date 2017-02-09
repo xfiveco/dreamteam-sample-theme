@@ -1,0 +1,48 @@
+/* ==========================================================================
+   #POST
+   Includes styles for default WP images classes
+   ========================================================================== */
+
+.c-post {
+  @include clearfix();
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 3em 1em 0 1em;
+}
+
+.c-post__author {
+  font-style: italic;
+}
+
+.c-post__excerpt {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 2em 0;
+}
+
+.alignnone {
+  margin: 1em 1em 1em 0;
+}
+
+.aligncenter {
+  margin: 1em auto;
+}
+
+.alignright {
+  float: right;
+  margin: 1em 0 1em 1em;
+}
+
+.alignleft {
+  float: left;
+  margin: 1em 1em 1em 0;
+}
+
+.wp-caption {
+  text-align: center;
+}
+
+.wp-caption-text {
+  font-style: italic;
+  margin-top: 0.5em;
+}
