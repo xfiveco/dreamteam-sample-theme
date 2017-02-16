@@ -4,21 +4,21 @@
   <a href="/" class="c-top-link">Home</a>
   <div class="o-layout o-layout--2 c-person">
     <div class="o-layout__item">
-      <img src="{{person.thumbnail}}" alt="{{person.title}}">
+      <img src="{{post.thumbnail}}" alt="{{post.title}}">
     </div>
 
     <div class="o-layout__item c-person__info">
-      <h1 class="c-person__info__name">{{person.title}}</h1>
-      <h2 class="c-person__info__position">{{TimberTerm(person.team_position).title}}</h2>
+      <h1 class="c-person__info__name">{{post.title}}</h1>
+      <h2 class="c-person__info__position">{{TimberTerm(post.team_position).title}}</h2>
       <div class="c-person__info__description">
-        {{person.content}}
+        {{post.content}}
       </div>
     </div>
 
     <div class="o-layout__item c-person__quote">
       <h2 class="c-person__quote__title">A Grain of Wisdom</h2>
       <blockquote class="c-person__quote__text">
-        <p>{{person.team_quote}}</p>
+        <p>{{post.team_quote}}</p>
       </blockquote>
     </div>
 
@@ -41,11 +41,11 @@
         <p>Sorry, nobody wanted to interview this person.</p>
       {% endif %}
 
-      {% if person.next.link is not empty %}
-        <a href="{{person.next.link}}" class="c-person__links__nav">Previous</a>
+      {% if post.next.link is not empty %}
+        <a href="{{post.next.link}}" class="c-person__links__nav">Previous</a>
       {% endif %}
-      {% if person.prev.link is not empty %}
-        <a href="{{person.prev.link}}" class="c-person__links__nav c-person__links__nav--next">Next</a>
+      {% if post.prev.link is not empty %}
+        <a href="{{post.prev.link}}" class="c-person__links__nav c-person__links__nav--next">Next</a>
       {% endif %}
     </div>
 
