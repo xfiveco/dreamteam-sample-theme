@@ -4,15 +4,13 @@
   {% if post.title %}<h1 class="c-team__heading">{{post.title}}</h1>{% endif %}
   {% if team is defined %}
     <ul class="o-layout o-layout--2 c-team">
-      {% set i = 1 %}
       {% for member in team %}
-        <li class="o-layout__item c-team__item {% if i is divisible by(2) %}c-team__item--reverse{% endif %}">
+        <li class="o-layout__item c-team__item {% if loop.index is divisible by(2) %}c-team__item--reverse{% endif %}">
           <a href="{{member.link}}" class="c-team__link">
             <h2 class="c-team__title">{{member.title}}</h2>
             <img src="{{member.thumbnail}}" alt="{{member.title}}" class="c-team__image">
           </a>
         </li>
-        {% set i = i + 1 %}
       {% endfor %}
     </ul>
   {% endif %}
