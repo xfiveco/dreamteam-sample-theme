@@ -31,8 +31,6 @@ class StarterSite extends TimberSite {
 		add_theme_support( 'menus' );
 		add_filter( 'timber_context', array( $this, 'add_to_context' ) );
 		add_filter( 'get_twig', array( $this, 'add_to_twig' ) );
-		add_action( 'init', array( $this, 'register_post_types' ) );
-		add_action( 'init', array( $this, 'register_taxonomies' ) );
 
 		// load filenames from manifest file
 		// used to determinate asset real path
@@ -56,14 +54,6 @@ class StarterSite extends TimberSite {
 	 */
 	public function override_timber_post_class( $post_class ) {
 		return 'ChiselPost';
-	}
-
-	public function register_post_types() {
-		//this is where you can register custom post types
-	}
-
-	public function register_taxonomies() {
-		//this is where you can register custom taxonomies
 	}
 
 	/**
